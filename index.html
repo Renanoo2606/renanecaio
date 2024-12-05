@@ -1,0 +1,151 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Receitas Culinárias</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Compartilhe Suas Receitas Favoritas</h1>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#receitas">Categorias</a></li>
+                <li><a href="#Adicionar">Adicionar Receita</a></li>
+                <li><a href="#projeto">Sobre</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="carousel" id="inicio">
+        <div class="slider-frame">
+          <div class="slide-images">
+            <div class="img-container">
+              <a href="https://www.tudogostoso.com.br/receita/324-massa-de-pizza.html">
+                <img src="img/pizza.jpg" alt="Pizza">
+              </a>
+            </div>
+            <div class="img-container">
+              <a href="https://www.tudogostoso.com.br/receita/91293-espaguete-a-bolonhesa.html">
+                <img src="img/receita3.jpg" alt="Epaguete a Bolonhesa">
+              </a>
+            </div>
+            <div class="img-container">
+              <a href="https://www.tudogostoso.com.br/receita/1525-churrasco-gaucho.html">
+                <img src="img/receita3copy.jpg" alt="Churrasco Gaucho">
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="projeto" id="projeto">
+        <div id="texto">
+            <h1>Sobre o projeto</h1>
+            <p>No nosso site de receitas, compartilhamos nossa paixão pela culinária com uma variedade de pratos organizados em categorias para facilitar sua busca. Oferecemos instruções detalhadas e fotos de cada receita, para que você cozinhe com confiança. Além disso, você pode compartilhar suas próprias imagens e opiniões sobre as receitas que experimentou. Com filtros intuitivos e um slider de receitas populares, nosso objetivo é tornar a experiência de cozinhar prática, divertida e deliciosa para todos!</p>
+        </div>
+        <div id="propaganda">
+            <div id="imagem1">
+                <img src="img/pessoa-cozinhando.jpg" alt="pessoa cozinhando">
+            </div>
+            <div id="descricao">
+                <p>O amor vai crescer e se tornar algo incondicional se seguir nossas receitas</p>
+            </div>
+        </div>
+      </section>
+
+    <section class="receitas" id="receitas">
+        <h2>Receitas dos Usuarios</h2>
+        <div class="filtro-categoria">
+            <label for="categoria">Filtrar por Categoria:</label>
+            <select id="categoria">
+                <option value="todas">Todas</option>
+                <option value="doces">Doces</option>
+                <option value="salgados">Salgados</option>
+                <option value="vegan">Vegan</option>
+            </select>
+        </div>
+
+        <div class="slider-container">
+            <button id="btn-anterior" class="nav-btn">◀</button>
+
+            <div class="slider-receitas">
+        <div class="receitas-lista">
+            <div class="receita-item" data-categoria="doces">
+                <a href="https://www.tudogostoso.com.br/receita/951-bolo-de-chocolate-molhadinho.html" target="_blank">
+                <img src="img/bolo.jpg" alt="Bolo de Chocolate">
+                </a>
+                <h3>Bolo de Chocolate</h3>
+                <p>Um bolo macio e úmido, feito com cacau em pó e coberto com uma deliciosa calda de chocolate, perfeito para ocasiões especiais ou sobremesas simples.</p>
+            </div>
+            <div class="receita-item" data-categoria="salgados">
+                <a href="https://www.tudogostoso.com.br/receita/8218-pizza-caseira.html" target="_blank">
+                <img src="img/pizza.jpg" alt="Pizza">
+                </a>
+                <h3>Pizza Caseira</h3>
+                <p>Massa crocante e caseira, coberta com molho de tomate fresco, queijo derretido e ingredientes a gosto, ideal para reunir a família em momentos descontraídos.</p>
+            </div>
+            <div class="receita-item" data-categoria="vegan">
+                <a href="https://www.tudogostoso.com.br/receita/233-salada-simples.html" target="_blank">
+                <img src="img/salada.jpg" alt="Salada Vegan">
+                </a>
+                <h3>Salada Vegan</h3>
+                <p>Uma combinação fresca de folhas verdes, legumes variados e um toque de azeite e limão, ótima para acompanhar refeições leves e saudáveis.</p>
+            </div>
+        </div>
+            </div>
+        <button id="btn-proximo" class="nav-btn">▶</button>
+        </div>
+    </section>
+    <section class="adicionar-receita" id="Adicionar">
+        <h2>Adicionar Nova Receita</h2>
+        <form id="form-receita">
+            <label for="nome-autor">Nome do Autor:</label>
+            <input type="text" id="nome-autor" required>
+
+            <label for="nome-receita">Nome da Receita:</label>
+            <input type="text" id="nome-receita" required>
+        
+            <label for="categoria-receita">Categoria:</label>
+            <select id="categoria-receita">
+                <option value="doces">Doces</option>
+                <option value="salgados">Salgados</option>
+                <option value="vegan">Vegan</option>
+            </select>
+        
+            <label for="descricao-receita">Descrição da Receita:</label>
+            <textarea id="descricao-receita" rows="4" required></textarea>
+        
+            <label for="imagem-receita">Imagem da Receita:</label>
+            <input type="file" id="imagem-receita" accept="image/*" required>
+
+            <label for="link-receita">Link da Receita:</label>
+            <input type="url" id="link-receita" required>
+        
+            <button type="submit">Adicionar Receita</button>
+        </form>
+        
+    </section>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Redes Sociais</h3>
+                <p><a href="https://www.instagram.com/renan_0_soares" target="_blank">@renan_0_soares</a></p>
+            </div>
+            <div class="footer-section">
+                <h3>Quer Sugerir algo ou denunciar algo suspeiro ?</h3>
+                <h3>Contatos</h3>
+                <p>Telefone: <a href="tel:+55519993716509">51 99371-6509</a></p>
+                <p>Email: <a href="mailto:contato@olhosatentos.com">receitas@mercado.com</a></p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 receitas. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
